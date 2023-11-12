@@ -1,13 +1,23 @@
-
+/**
+ ******************************************************************************
+ * @file    queue.h
+ * @author  truongdv
+ * @version 1.0
+ * @date    
+ * @brief   
+ * @history
+ ******************************************************************************/
 #ifndef __QUEUE_H
 #define __QUEUE_H
 
+/* Includes ------------------------------------------------------------------*/
 #include "stdint.h"
 
 
-
+/* Exported macro ------------------------------------------------------------*/
 #define QUEUE_SIZE  10
 
+/* Exported types ------------------------------------------------------------*/
 /* Class Queue */
 typedef struct{
 	 int32_t buffer[QUEUE_SIZE]; /*  where the data things are */
@@ -22,6 +32,9 @@ typedef struct{
 	 
 }Queue;
 
+
+
+/* Exported functions ------------------------------------------------------- */
 /* Constructors and destructors  */
 void Queue_Init(Queue *const me, int32_t (*isFullFunction)(Queue *const me), 
 								int32_t (*isEmptyFunction)(Queue *const me),
